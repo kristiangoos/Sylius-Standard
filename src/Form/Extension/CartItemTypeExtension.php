@@ -11,16 +11,14 @@ class CartItemTypeExtension extends AbstractTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-
         // Modify the quantity field
         $builder
             ->add('quantity', IntegerType::class, [
-            'attr' => [
-                'min' => 10,
-                'step' => 10,
-                'value' => 10,
-            ],
-        ]);
+                'attr' => [
+                    'min' => 10,
+                    'step' => 10,
+                ],
+            ]);
     }
 
     public static function getExtendedTypes(): iterable
